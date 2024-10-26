@@ -42,6 +42,7 @@ class SimpleModel:
 
     def predict(self, review: str) -> SimpleModelResults:
         # TODO: Use the Model.predict to get the result
+        result = Model.predict(self.session, review=review)
         return SimpleModelResults.model_validate(result)
 
 
